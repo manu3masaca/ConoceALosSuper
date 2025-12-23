@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Superhéroes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente API -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+  <!-- link iconos -->
+  <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@1.4.2/src/css/phosphor.css">
+
+  <!-- enlace CSS -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+ <header class="main-header">
+  <h1>Busca tu superhéroe</h1>
+  <p>Encuentra información de tus héroes favoritos</p>
+  <button id="darkModeToggle">cambiar modo</button>
+</header>
+
+
+  <main>
+    
+    <section>
+      <input id="searchInput" type="text" placeholder="Buscar superhéroe..." aria-label="Buscar superhéroe">
+      <section aria-label="Filtros"></section>
+
+      <select id="sortSelect">
+        <option value="asc">A → Z</option>
+        <option value="desc">Z → A</option>
+      </select>
+      
+    
+      <select id="publisherFilter">
+       <option value="all">Todas las editoriales</option>
+       <option value="Marvel Comics">Marvel</option>
+       <option value="DC Comics">DC</option>
+      </select>
+
+      <select id="genderFilter">
+       <option value="all">Todos los géneros</option>
+       <option value="Male">Masculino</option>
+       <option value="Female">Femenino</option>
+      </select>
+
+      <select id="powerFilter">
+       <option value="none">Sin filtro de poder</option>
+       <option value="intelligence">Inteligencia</option>
+       <option value="strength">Fuerza</option>
+       <option value="speed">Velocidad</option>
+      </select>
+    </section>
+
+    </section>
+
+    <section id="resultsInfo"></section>
+
+    <section id="heroesList"></section>
+
+    <nav id="pagination"></nav>
+
+    <section id="heroDetails" hidden></section>
+  </main>
+
+  
+
+  <!-- enlace JS -->
+  <script src="js/api.js"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/render.js"></script>
+  
+  <script src="js/search.js"></script>
+  <script src="js/sort.js"></script>
+  <script src="js/details.js"></script>
+  <script src="js/darkmode.js"></script>
+</body>
+</html>
